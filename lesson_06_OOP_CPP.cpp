@@ -7,16 +7,17 @@
 #include <QCoreApplication>
 #include <iostream>
 #include <stdlib.h>
-//#include <list>
-//#include <set>
 #include <string>
-//#include <sstream>
 using namespace std;
 //----------------------------------------------------------------------------
 //#define NDEBUG
 #include <cassert>
 //----------------------------------------------------------------------------
-//#include "game_blackjack.h"
+#include "card.h"
+#include "hand.h"
+#include "genericplayer.h"
+#include "player.h"
+#include "house.h"
 //----------------------------------------------------------------------------
 /*
 1. Создать программу, которая считывает целое число типа int.
@@ -48,7 +49,6 @@ int inputIntPositive()
     }
   }
 }
-
 
 void task_1()
 {
@@ -116,6 +116,32 @@ void task_2()
 а также общую сумму очков его карт.
 //*/
 //----------------------------------------------------------------------------
+void task_3_4_5()
+{
+  cout << "\nTask 3,4,5\n" << endl;
+
+  House house;
+  Player player_one;
+  Player player_two;
+
+  house.Add(new Card(HEARTS,QUEEN,false));
+  house.Add(new Card(SPADES,ACE,true));
+
+  cout << house;
+
+  player_one.Add(new Card(CLUBS,THREE,true));
+  player_one.Add(new Card(DIAMONDS,JACK,true));
+
+  cout << player_one;
+
+  player_two.Add(new Card(DIAMONDS,FIVE,true));
+  player_two.Add(new Card(HEARTS,SEVEN,true));
+
+  cout << player_two;
+
+  cout << endl;
+}
+
 //----------------------------------------------------------------------------
 int main(int argc, char *argv[])
 {
@@ -131,9 +157,9 @@ int main(int argc, char *argv[])
   task_2();
   //*/
   //----------------------------------------------------------------------------
-  // Task 3
-  /*
-  task_3();
+  // Task 3,4,5
+  //*
+  task_3_4_5();
   //*/
   //----------------------------------------------------------------------------
   return a.exec();
