@@ -15,7 +15,7 @@ int Card::GetValue() const {
   return value;
 }
 
-const std::ostream& operator<<(std::ostream& out, const Card &card)
+std::ostream& operator<<(std::ostream& out, const Card &card)
 {
   if(!card.isFaceUp())
     out << "XX";

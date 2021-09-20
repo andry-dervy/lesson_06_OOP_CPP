@@ -19,8 +19,8 @@ const std::ostream& operator<<(std::ostream& out, const GenericPlayer &gp)
 {
   out << "Player " << gp.getName() <<
          " have got cards: ";
-  for(const auto& c: gp.getCards())
-    out << c;
+  for(const auto c: gp.getCards())
+    out << *c;
 
   out << ". Total: " << gp.getTotal();
   out << std::endl;

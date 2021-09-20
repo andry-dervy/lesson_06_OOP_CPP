@@ -14,7 +14,7 @@ public:
   Player(const Player &p);
   ~Player();
 
-  virtual bool IsHitting() const;
+  bool IsHitting() const;
   void Win() const;
   void Lose() const;
   void Push() const;

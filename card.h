@@ -23,7 +23,7 @@ public:
   int GetValue() const;
   _rank GetRank() const {return m_rank;}
   bool isFaceUp() const {return m_IsFaceUp;}
-  friend const std::ostream& operator<<(std::ostream& out, const Card &card);
+  friend std::ostream& operator<<(std::ostream& out, const Card &card);
 };
 
 #endif // CARD_H

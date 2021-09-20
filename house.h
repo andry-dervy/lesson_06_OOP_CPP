@@ -10,7 +10,7 @@ public:
   House(std::string aName = "House")
     :GenericPlayer(aName){};
   ~House(){}
-  virtual bool IsHitting() const;
+  bool IsHitting() const;
   void FlipFirstCard();
 };
 

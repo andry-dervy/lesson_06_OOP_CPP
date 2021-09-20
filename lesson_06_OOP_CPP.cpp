@@ -120,6 +120,10 @@ void task_3_4_5()
 {
   cout << "\nTask 3,4,5\n" << endl;
 
+  Card card(HEARTS,QUEEN,true);
+
+  cout << card << endl;
+
   House house;
   Player player_one;
   Player player_two;
